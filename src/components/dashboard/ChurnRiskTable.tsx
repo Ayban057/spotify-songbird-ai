@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Progress } from '@/components/ui/progress';
+import { CustomProgress } from '@/components/ui/custom-progress';
 import { Button } from '@/components/ui/button';
 
 type User = {
@@ -46,7 +46,7 @@ const ChurnRiskTable: React.FC<ChurnRiskTableProps> = ({ users }) => {
               <TableCell className="text-white">{user.lastActive}</TableCell>
               <TableCell>
                 <div className="flex items-center gap-2">
-                  <Progress 
+                  <CustomProgress 
                     value={user.churnRisk} 
                     className="h-2" 
                     indicatorClassName={

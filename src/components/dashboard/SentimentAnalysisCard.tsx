@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
+import { CustomProgress } from '@/components/ui/custom-progress';
 
 interface SentimentItem {
   category: string;
@@ -39,7 +39,7 @@ const SentimentAnalysisCard = () => {
                   {item.score}%
                 </span>
               </div>
-              <Progress 
+              <CustomProgress 
                 value={item.score} 
                 className="h-2" 
                 indicatorClassName={item.sentimentClass} 
@@ -53,7 +53,7 @@ const SentimentAnalysisCard = () => {
             <span className="text-lg font-medium text-white">73%</span>
           </div>
           <div className="mt-2">
-            <Progress value={73} className="h-2" indicatorClassName="bg-spotify-green" />
+            <CustomProgress value={73} className="h-2" indicatorClassName="bg-spotify-green" />
           </div>
         </div>
       </CardContent>
